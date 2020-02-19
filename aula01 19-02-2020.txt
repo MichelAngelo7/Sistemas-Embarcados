@@ -1,0 +1,30 @@
+UnoArduSimV2.2
+
+https://www.tinkercad.com/
+
+const int vermelho = 3;
+const int amarelo = 4;
+const int verde = 5;
+
+void setup(){
+	pinMode(vermelho,OUTPUT);
+	pinMode(amarelo,OUTPUT);
+	pinMode(verde,OUTPUT);
+}
+
+void loop()
+{
+	
+	digitalWrite(vermelho, HIGH);
+	delay(1000);
+	digitalWrite(vermelho, LOW);
+	delay(1000);
+	digitalWrite(amarelo, HIGH);
+	delay(1000);
+	digitalWrite(amarelo, LOW);
+	delay(1000);
+	digitalWrite(verde, HIGH);
+	delay(1000);
+	digitalWrite(verde, LOW);
+	delay(1000);
+}
