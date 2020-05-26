@@ -1,0 +1,29 @@
+//inicia a variavel do motor de passo
+#include <Stepper.h>
+const int passos = 100;  //numero de passo que o motor vai dar
+
+//inicia o motor utilizando a biblioteca no pino 8 a 11
+Stepper myStepper(passos, 5, 4, 3, 2);
+
+int stepCount = 0;  // number of steps the motor has taken
+
+void setup() {
+	myStepper.setSpeed(20);
+	
+	Serial.begin(9600);
+}
+
+void loop() {
+	
+	Serial.println(analogRead(A0));
+	
+	if(analogRead(A0)<=200)
+	{
+		myStepper.step(200);	
+	}
+	if(analogRead(A0)>=800)
+	{
+		myStepper.step(-200);
+	}
+	delay(1);
+}
